@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Data Pakaian</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Data Pakaian</h1>
+      <form action="proses.php" method="post">
+        <div class="form-group">
+          <label for="kode">Kode Pakaian:</label>
+          <input
+            type="text"
+            id="kode"
+            name="kode"
+            class="form-control"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="nama">Nama Pakaian:</label>
+          <input
+            type="text"
+            id="nama"
+            name="nama"
+            class="form-control"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="jenis">Jenis:</label>
+          <select id="jenis" name="jenis" class="form-control" required>
+            <option value="baju">BAJU</option>
+            <option value="celana">CELANA</option>
+            <option value="aksesoris">AKSESORIS</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="harga">Harga:</label>
+          <input
+            type="number"
+            id="harga"
+            name="harga"
+            class="form-control"
+            required
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">SAVE</button>
+        <button type="button" class="btn btn-secondary">EDIT</button>
+        <button type="button" class="btn btn-danger">DELETE</button>
+      </form>
+
+      <h2>Data Pakaian</h2>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Kode Pakaian</th>
+            <th>Nama Pakaian</th>
+            <th>Jenis</th>
+            <th>Harga</th>
+            <th>Aksi</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

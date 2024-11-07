@@ -1,0 +1,221 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f2f5;
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  width: 80%;
+  height: 80%;
+  padding: 30px;
+  box-sizing: border-box;
+  overflow: auto;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+h2 {
+  color: #00ff04;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #555;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus {
+  border-color: #4d4d4d;
+  outline: none;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #2b2c2d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.table th,
+.table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+.table th {
+  background-color: #414142;
+  color: white;
+}
+
+.table-striped tbody tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+.btn {
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+  background-color: #353536;
+  transition: background-color 0.3s;
+}
+
+.btn-secondary {
+  background-color: #7d6d6c;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268;
+}
+
+@media print {
+  body {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+  }
+  .btn,
+  .form-control {
+    display: none;
+  }
+}
+
+/* CSS untuk menata tombol laporan dan tombol cetak */
+.btn-container {
+  display: flex;
+  justify-content: space-between; /* Menempatkan tombol di kiri dan kanan */
+  margin-top: 20px; /* Jarak atas tombol */
+  margin-bottom: 20px; /* Jarak bawah tombol */
+}
+
+.btn-container .btn {
+  font-size: 12px; /* Ukuran font lebih kecil */
+  padding: 5px 10px; /* Padding tombol lebih kecil */
+  width: auto; /* Mengatur lebar tombol agar tidak memenuhi layar */
+  border-radius: 4px; /* Radius tombol */
+  cursor: pointer; /* Menambahkan pointer saat hover */
+}
+
+.btn-container .btn-cetak {
+  background-color: #007bff;
+  color: white;
+  border: none;
+}
+
+.btn-container .btn-cetak:hover {
+  background-color: #414142;
+}
+
+.btn-container .btn-laporan {
+  background-color: #2b2c2d;
+  color: white;
+  border: none;
+}
+
+.btn-container .btn-laporan:hover {
+  background-color: #218838;
+}
+
+/* CSS untuk menata tombol cetak agar lebih kecil dan tidak memenuhi layar */
+.btn-container {
+  display: flex;
+  justify-content: flex-start; /* Tombol di kiri */
+  margin-top: 20px; /* Jarak atas tombol */
+  margin-bottom: 20px; /* Jarak bawah tombol */
+}
+.btn-container .btn {
+  font-size: 12px; /* Ukuran font lebih kecil */
+  padding: 5px 10px; /* Padding tombol lebih kecil */
+  width: auto; /* Mengatur lebar tombol agar tidak memenuhi layar */
+  border-radius: 4px; /* Radius tombol */
+  cursor: pointer; /* Menambahkan pointer saat hover */
+  margin-right: 10px; /* Jarak antar tombol */
+}
+.btn-container .btn-cetak {
+  background-color: #007bff;
+  color: white;
+  border: none;
+}
+.btn-container .btn-cetak:hover {
+  background-color: #414142;
+}
+.btn-container .btn-laba-rugi {
+  background-color: #2b2c2d;
+  color: white;
+  border: none;
+}
+.btn-container .btn-laba-rugi:hover {
+  background-color: #218838;
+}
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Media query untuk pencetakan */
+@media print {
+  /* Menyembunyikan form input dan button submit saat mencetak */
+  .form-group,
+  button[type="submit"] {
+    display: none;
+  }
+
+  /* Menyembunyikan tombol cetak saat mencetak */
+  .btn-container {
+    display: none;
+  }
+
+  /* Menyembunyikan footer dengan tanggal saat mencetak */
+  .container .footer {
+    display: none;
+  }
+}
